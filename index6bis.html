@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(67, 110, 251);
+        border: 1px solid black;
+      }
+      .container {
+        /* background-color: blanchedalmond; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        height: 100vh;
+      }
+      .textetodo {
+        font-size: 30px;
+        color: white;
+      }
+      .textetodo2 {
+        color: white;
+      }
+
+      .textetodo3 {
+        color: white;
+      }
+      .addBtn {
+        font-weight: bolder;
+        font-size: 20px;
+        background-color: white;
+        padding: 8px;
+      }
+
+      #myInput {
+        width: 300px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="textetodo">
+        <h1>To-Do App!</h1>
+      </div>
+      <div class="textetodo2">
+        <h2>Add new to do</h2>
+      </div>
+      <div>
+        <input type="text" id="myInput" placeholder="Enter your to do" />
+        <span class="addBtn"> Add</span>
+        <ul class="todo">
+          <li>this si the main li</li>
+        </ul>
+      </div>
+      <div class="textetodo3">
+        <p>click to toggle complete.</p>
+        <p>click to delete the todo.</p>
+      </div>
+    </div>
+
+    <script>
+      const inputValue = document.getElementById("myInput");
+      console.log(inputValue);
+      // recuperer le input :: sa valeur === docu,ent;getelemntby***.value
+      const todoUl = document.querySelector(".todo");
+      // recuperer le ul
+      // recuperer le span Add
+      const btn = document.querySelector(".addBtn");
+
+      // cree une fonction elle prend comme parametre event
+      // son creeun nv element == creatElement
+      // textContent == value taa linput
+      // append child le ul
+      function creatLi() {
+        let li = document.createElement("li");
+        li.textContent = inputValue.value;
+        todoUl.appendChild(li);
+      }
+
+      btn.addEventListener("click", creatLi);
+    </script>
+  </body>
+</html>
