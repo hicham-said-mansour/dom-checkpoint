@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-  <style>
-    p{
-      background-color: azure;
-    }
-  </style>
-</head>
-<body>
-
-  <p class="paragr" id="first-element">je deteste js</p>
-  <p class="paragr" id="second-element">i hate js</p>
-  <p class="paragr" id="third-element">j'en ai marre js</p>
-  <p class="paragr" id="forth-element">js ma bete noire</p>
-  
-  <script>
-    let paras=document.querySelectorAll("p");
-    paras.forEach(elem=>elem.style.fontSize="30px");
-    
-    for(let i=0; i<paras.length; i++){
-      if(i%2==0){
-        paras[i].style.color="red";
-      }else{
-        paras[i].style.color="blue";
-        paras[i].style.cssText="color:green; background-color:aqua;";
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        background-color: azure;
       }
-    }
-  </script>
-</body>
+    </style>
+  </head>
+  <body>
+    <h2>this is a git modification</h2>
+    <p class="paragr" id="first-element">je deteste js</p>
+    <p class="paragr" id="second-element">i hate js</p>
+    <p class="paragr" id="third-element">j'en ai marre js</p>
+    <p class="paragr" id="forth-element">js ma bete noire</p>
+
+    <script>
+      let paras = document.querySelectorAll("p");
+      paras.forEach((elem) => (elem.style.fontSize = "30px"));
+
+      for (let i = 0; i < paras.length; i++) {
+        if (i % 2 == 0) {
+          paras[i].style.color = "red";
+        } else {
+          paras[i].style.color = "blue";
+          paras[i].style.cssText = "color:green; background-color:aqua;";
+        }
+      }
+    </script>
+  </body>
 </html>
